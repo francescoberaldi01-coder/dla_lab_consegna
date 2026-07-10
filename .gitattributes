@@ -1,0 +1,5 @@
+# Normalizza i file testuali nel repository.
+* text=auto
+
+# I notebook restano JSON testuale, ma senza conversioni non necessarie.
+*.ipynb text eol=lf

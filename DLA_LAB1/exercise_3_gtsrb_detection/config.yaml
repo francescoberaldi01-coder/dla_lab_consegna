@@ -1,0 +1,20 @@
+dataset:
+  data_dir: ../_data
+  batch_size: 256
+  num_workers: 6
+  augmentation: heavy_blur
+model:
+  name: resnet50
+  num_classes: 43
+  pretrained: true
+training:
+  epochs: 50
+  lr: 0.0001
+  optimizer: adamw
+  label_smoothing: 0.1
+  use_onecycle_lr: true
+  use_class_weights: true
+  early_stopping_patience: 5
+logging:
+  project_name: DeepLearningApplicationLab1
+  run_name: resnet50_gtsrb_pretraining

@@ -1,0 +1,28 @@
+environment:
+  name: LunarLander-v3
+  max_steps: 1000
+
+training:
+  seeds:
+    - 42
+    - 123
+    - 314
+  num_episodes: 1200
+  gamma: 0.995
+  learning_rate: 0.0005
+  hidden_dim: 128
+  rollout_steps: 5
+  vectorized: true
+  num_envs: 8
+  vector_env_type: sync
+  value_loss_weight: 1.0
+  standardize_advantages: true
+  standardize_critic_targets: true
+  entropy_weight: 0.00001
+  force_cpu: true
+
+evaluation:
+  num_episodes: 20
+  deterministic: true
+  eval_every_n: 50
+  eval_episodes_m: 20

@@ -1,0 +1,26 @@
+dataset:
+  data_dir: ../_data
+  batch_size: 4
+  num_workers: 4
+model:
+  name: faster_rcnn_resnet50
+  num_classes: 44
+  pretrained: true
+  min_size: 800
+  max_size: 1360
+  backbone_checkpoint_dir: checkpoints
+  backbone_checkpoint_prefix: resnet50_gtsrb
+  backbone_checkpoint_metric: val_f1_score
+  backbone_image_mean: [0.5, 0.5, 0.5]
+  backbone_image_std: [0.5, 0.5, 0.5]
+training:
+  epochs: 10
+  lr: 0.005
+  optimizer: sgd
+logging:
+  project_name: DeepLearningApplicationLab1
+  run_name: faster_rcnn_gtsrb_fpn_training
+evaluation:
+  checkpoint_dir: checkpoints/faster_rcnn_gtsrb_fpn
+  checkpoint_prefix: faster_rcnn_resnet50_gtsrb
+  checkpoint_metric: val_mAP_50

@@ -1,0 +1,32 @@
+environment:
+  name: LunarLander-v3
+  max_steps: 1000
+
+training:
+  seeds:
+    - 42
+    - 123
+    - 314
+  num_episodes: 1500
+  gamma: 0.99
+  learning_rate: 0.0005
+  hidden_dim: 128
+  batch_size: 64
+  replay_capacity: 150000
+  min_replay_size: 10000
+  train_every_steps: 1
+  gradient_steps: 4
+  vectorized: true
+  num_envs: 8
+  vector_env_type: sync
+  target_update_every_steps: 1000
+  epsilon_start: 1.0
+  epsilon_end: 0.05
+  epsilon_decay_steps: 70000
+  gradient_clip: 10.0
+  force_cpu: true
+
+evaluation:
+  num_episodes: 20
+  eval_every_n: 50
+  eval_episodes_m: 20

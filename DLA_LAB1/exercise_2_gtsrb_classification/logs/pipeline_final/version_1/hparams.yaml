@@ -1,0 +1,7 @@
+num_classes: 43
+pretrained: true
+lr: 0.0001
+optimizer_name: adamw
+model_name: resnet18
+label_smoothing: 0.1
+use_onecycle_lr: true

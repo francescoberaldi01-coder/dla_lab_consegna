@@ -1,0 +1,18 @@
+# Ambienti Python locali
+dla_env/
+.venv/
+venv/
+env/
+
+# Dataset e artefatti pesanti non versionati
+DLA_LAB1/_data/
+DLA_LAB2/**/outputs/
+DLA_LAB2/**/runs/
+DLA_LAB2/**/checkpoints/
+DLA_LAB2/**/models/
+
+# Output sperimentali e cache
+**/wandb/
+**/lightning_logs/
+**/__pycache__/
+**/.ipynb_checkpoints/

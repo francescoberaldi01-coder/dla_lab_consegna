@@ -1,0 +1,17 @@
+dataset:
+  name: cornell-movie-review-data/rotten_tomatoes
+  max_length: 128
+model:
+  name: distilbert/distilbert-base-uncased
+  num_labels: 2
+training:
+  learning_rate: 0.00002
+  train_batch_size: 16
+  eval_batch_size: 64
+  gradient_accumulation_steps: 2
+  num_train_epochs: 5
+  weight_decay: 0.01
+  warmup_ratio: 0.1
+  seed: 42
+output:
+  dir: outputs/distilbert_finetuning

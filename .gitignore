@@ -1,0 +1,48 @@
+# Ambienti Python locali
+dla_env/
+.venv/
+.venv-*/
+venv/
+env/
+
+# Cache e file generati da Python/Jupyter
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Dataset scaricati automaticamente
+DLA_LAB1/_data/
+
+# Output degli esperimenti
+DLA_LAB1/exercise_2_gtsrb_classification/runs/
+**/checkpoints/*
+!**/checkpoints/.gitkeep
+*.pth
+*.pt
+*.ckpt
+
+# Log e tracking esperimenti
+**/lightning_logs/
+**/wandb/
+**/DeepLearningApplicationLab1/
+
+# File temporanei di sistema/editor
+.env
+.agents/
+.DS_Store
+Thumbs.db
+
+# Output Lab 2
+DLA_LAB2/**/outputs/
+DLA_LAB2/**/runs/
+DLA_LAB2/**/checkpoints/
+DLA_LAB2/**/models/
+DLA_LAB2/**/wandb/
+DLA_LAB2/**/.cache/
+
+# Output Lab 3
+DLA_LAB3/**/outputs/
+DLA_LAB3/**/runs/
+DLA_LAB3/**/checkpoints/
+DLA_LAB3/**/models/
+DLA_LAB3/**/wandb/

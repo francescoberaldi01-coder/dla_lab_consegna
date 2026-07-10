@@ -1,0 +1,27 @@
+environment:
+  name: CartPole-v1
+  max_steps: 500
+
+training:
+  seeds:
+    - 42
+    - 123
+    - 314
+    - 2024
+    - 9001
+  num_episodes: 300
+  gamma: 0.99
+  policy_learning_rate: 0.001
+  value_learning_rate: 0.001
+  hidden_dim: 128
+  force_cpu: true
+
+comparison:
+  standardize_returns: true
+
+evaluation:
+  num_episodes: 10
+  deterministic: true
+  eval_every_n: 20
+  eval_episodes_m: 10
+
